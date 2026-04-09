@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OnlineFussballManager: Transfermarkt – AWP Anzeige
 // @namespace    https://github.com/schipa
-// @version      1.0.0
+// @version      1.0.1
 // @description  Zeigt die AWP und die Differenz zur nächsten Stärke auf dem Transfermarkt an.
 // @author       schipa
 // @match        https://www.onlinefussballmanager.de/transfer/transfermarkt.php*
@@ -12,7 +12,7 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+;(function () {
     'use strict'
 
     const TABLE_SELECTOR = 'table.content_table2'
@@ -23,6 +23,7 @@
     const CELL_EPTP_SELECTOR = 'td:nth-of-type(6)'
     const CELL_ST_SELECTOR = 'td:nth-of-type(5)'
 
+    // prettier-ignore
     const AWP_LOWER_BOUNDS = [
         0, 168, 378, 735, 1239, 1974, 2751, 3570, 4452, 5376,
         6342, 7350, 8400, 9502, 10658, 11865, 13125, 14438, 15802, 17199,
@@ -54,7 +55,7 @@
     }
 
     function tamperHead(table) {
-        if (!table instanceof Document) {
+        if (!(table instanceof Document)) {
             return
         }
 
@@ -65,7 +66,7 @@
     }
 
     function tamperRows(table) {
-        if (!table instanceof Document) {
+        if (!(table instanceof Document)) {
             return
         }
 
@@ -106,4 +107,4 @@
     function format(number) {
         return Intl.NumberFormat().format(number)
     }
-})();
+})()

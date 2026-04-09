@@ -2,6 +2,12 @@
 
 UserScripts für [OnlineFussballManager](https://www.onlinefussballmanager.de)
 
+## Finanzen
+
+### Sponsor
+
+[Ranking](finances/spon_waehlen/rank.user.js) – Errechnet ein Ranking der Sponsorenangebote anhand erwarteter Siege und Ligaergebnis.
+
 ## Transfer
 
 ### Transfermarkt

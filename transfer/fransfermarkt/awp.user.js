@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OnlineFussballManager: Transfermarkt – AWP Anzeige
 // @namespace    https://github.com/schipa
-// @version      1.0.1
+// @version      1.0.2
 // @description  Zeigt die AWP und die Differenz zur nächsten Stärke auf dem Transfermarkt an.
 // @author       schipa
 // @match        https://www.onlinefussballmanager.de/transfer/transfermarkt.php*
@@ -55,7 +55,7 @@
     }
 
     function tamperHead(table) {
-        if (!(table instanceof Document)) {
+        if (!(table instanceof HTMLTableElement)) {
             return
         }
 
@@ -66,7 +66,7 @@
     }
 
     function tamperRows(table) {
-        if (!(table instanceof Document)) {
+        if (!(table instanceof HTMLTableElement)) {
             return
         }
 
